@@ -1,0 +1,95 @@
+package com.xworkz.dance.dto;
+
+import java.io.Serializable;
+
+public class DanceDTO implements Serializable {
+
+    private String name;
+    private int age;
+    private String gender;
+    private String style;
+    private String experience;
+    private String availability;
+    private String phone;
+    private String address;
+
+    DanceDTO(){
+        System.out.println("No-arg const of DTO");
+    }
+
+    public DanceDTO(String name, int age, String gender, String style, String experience, Boolean availability, String phone, String address){
+
+        this.name =name;
+        this.age =age;
+        this.gender =gender;
+        this.style =style;
+        this.experience =experience;
+        this.availability = String.valueOf(availability);
+        this.phone =phone;
+        this.address =address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
