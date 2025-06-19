@@ -32,21 +32,26 @@ public class DanceServlet extends HttpServlet {
         String experience = req.getParameter("experience");
         String availabilityStr = req.getParameter("availability");
         boolean availability = Boolean.parseBoolean(availabilityStr);
-        String phone = req.getParameter("phone");
+        String phone1 = req.getParameter("phone");
+        Long phone = Long.parseLong(phone1);
         String address = req.getParameter("address");
 
         DanceDTO danceDTO = new DanceDTO(name, age, gender,style,experience,availability,phone,address);
         System.out.println("Name="+name+" Age="+age+" Gender="+" Style="+style+" Experience="+experience+" Availability="+availability+" Phone="+phone+" Address="+address);
 
         DanceService danceService = new DanceServiceImp();
-        danceService.validate(danceDTO);
+        String result=   danceService.validate(danceDTO);
 
-        DanceRepository danceRepository = new DanceRepositoryImp();
-        danceRepository.save(danceDTO);
 
-        req.setAttribute("dto", danceDTO);
+        req.setAttribute("message", result);
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("danceResult.jsp");
+        if(!result.equals("Details saved successfully"))
+        {
+            req.setAttribute("dto", danceDTO);
+        }
+
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("dance.jsp");
         requestDispatcher.forward(req, res);
 
     }
