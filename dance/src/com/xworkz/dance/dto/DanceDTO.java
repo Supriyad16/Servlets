@@ -10,21 +10,20 @@ public class DanceDTO implements Serializable {
     private String style;
     private String experience;
     private String availability;
-    private String phone;
+    private Long phone;
     private String address;
 
     DanceDTO(){
         System.out.println("No-arg const of DTO");
     }
 
-    public DanceDTO(String name, int age, String gender, String style, String experience, Boolean availability, String phone, String address){
+    public DanceDTO(String name, int age, String gender, String style, String experience, Boolean availability, Long phone, String address){
 
         this.name =name;
         this.age =age;
         this.gender =gender;
         this.style =style;
-        this.experience =experience;
-        this.availability = String.valueOf(availability);
+        this.experience = String.valueOf(availability);
         this.phone =phone;
         this.address =address;
     }
@@ -77,11 +76,11 @@ public class DanceDTO implements Serializable {
         this.availability = availability;
     }
 
-    public String getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(Long phone) {
         this.phone = phone;
     }
 

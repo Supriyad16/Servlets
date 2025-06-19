@@ -22,7 +22,7 @@
                     <a class="nav-link active" aria-current="page" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.jsp">Home</a>
+                    <a class="nav-link" href="index.jsp">Home2</a>
                 </li>
             </ul>
         </div>
@@ -31,15 +31,18 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-        <h1 class="mb-4 text-center">Birth Certificate Form</h1>
-<form action="dance" method="post">
+        <h1 class="mb-4 text-center">Dance Application Form</h1>
+
+        <div class="text-danger">${message}</div>
+
+        <form action="dance" method="post">
     <div class="mb-3">
-        <label for="name" class="form-label"><strong>Name</strong></label>
+        <label for="name" class="form-label" value="${dto.name}"><strong>Name</strong></label>
         <input type="text" class="form-control" id="name" name="name">
     </div>
 
     <div class="mb-3">
-        <label for="age" class="form-label"><strong>Age</strong></label>
+        <label for="age" class="form-label" value="${dto.age}"><strong>Age</strong></label>
         <input type="number" class="form-control" id="age" name="age">
     </div>
 
@@ -99,7 +102,7 @@
 
     <label><strong>Availability on Weekends</strong></label>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="radioDefault" id="Default1">
+        <input class="form-check-input" type="radio" name="radioDefault" id="Default1" >
         <label class="form-check-label" for="default1">
             Yes
         </label>
@@ -112,12 +115,12 @@
     </div>
 
     <div class="mb-3">
-        <label for="phone" class="form-label"><strong>Phone Number</strong></label>
+        <label for="phone" class="form-label" value="${dto.phone}"><strong>Phone Number</strong></label>
         <input type="number" class="form-control" id="phone" name="phone">
     </div>
 
     <div class="mb-3">
-        <label for="address" class="form-label"><strong>Address</strong></label>
+        <label for="address" class="form-label" value="${dto.address}"><strong>Address</strong></label>
         <input type="text" class="form-control" id="address" name="address">
     </div>
 

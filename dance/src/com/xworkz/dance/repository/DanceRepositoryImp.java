@@ -21,7 +21,7 @@ public class DanceRepositoryImp implements DanceRepository{
             Connection connection = DriverManager.getConnection(url,username,password);
 
             //prepare the statement
-            String sql = "insert into dancedetails values(0,  '"+danceDTO.getName()+"', "+danceDTO.getAge()+", '"+danceDTO.getGender()+"','"+danceDTO.getStyle()+"', '"+danceDTO.getExperience()+"', '"+danceDTO.getAvailability()+"', '"+danceDTO.getPhone()+"', '"+danceDTO.getAddress()+"')";
+            String sql = "insert into dancedetails values(0, '"+danceDTO.getName()+"', "+danceDTO.getAge()+", '"+danceDTO.getGender()+"','"+danceDTO.getStyle()+"', '"+danceDTO.getExperience()+"', '"+danceDTO.getAvailability()+"', '"+danceDTO.getPhone()+"', '"+danceDTO.getAddress()+"')";
 
             Statement statement = connection.createStatement();
 
@@ -35,7 +35,8 @@ public class DanceRepositoryImp implements DanceRepository{
             throw new RuntimeException(e);
         }
 
-
         return "false";
     }
 }
+
+
