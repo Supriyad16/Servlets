@@ -42,7 +42,6 @@ public class DanceServlet extends HttpServlet {
         DanceService danceService = new DanceServiceImp();
         String result=   danceService.validate(danceDTO);
 
-
         req.setAttribute("message", result);
 
         if(!result.equals("Details saved successfully"))
@@ -50,9 +49,31 @@ public class DanceServlet extends HttpServlet {
             req.setAttribute("dto", danceDTO);
         }
 
-
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("dance.jsp");
         requestDispatcher.forward(req, res);
 
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String id1 = req.getParameter("id");
+        int id = Integer.parseInt(id1);
+
+        System.out.println("Details by Id = "+id);
+
+        DanceService danceService = new DanceServiceImp();
+        DanceDTO danceDTO = danceService.findById(id);
+
+
+        if(danceDTO==null){
+            System.out.println("invalid");
+        }
+
+        else{
+            System.out.println("valid");
+        }
+    }
 }
+
+

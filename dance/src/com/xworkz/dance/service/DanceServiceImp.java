@@ -55,8 +55,6 @@ public class DanceServiceImp implements DanceService {
                 return "Please select Previous Dance Experience";
             }
 
-
-
             Long number = danceDTO.getPhone();
 
             if (number != null && String.valueOf(number).length() == 10) {
@@ -65,7 +63,6 @@ public class DanceServiceImp implements DanceService {
                 System.out.println("Phone number is invalid");
                 return "Please enter a valid 10-digit phone number";
             }
-
 
             String address = danceDTO.getAddress();
 
@@ -76,10 +73,23 @@ public class DanceServiceImp implements DanceService {
                 return "Please enter a valid address (6–29 characters)";
             }
 
-
             DanceRepository danceRepository = new DanceRepositoryImp();
              danceRepository.save(danceDTO);
         }
         return "Details saved successfully";
+    }
+
+    @Override
+    public DanceDTO findById(int id) {
+        if(id<0){
+            System.out.println("Id is invalid");
+            return null;
+        }
+        else{
+            System.out.println("Id is valid");
+            DanceRepository danceRepository = new DanceRepositoryImp();
+            return danceRepository.findById(id);
+        }
+       // return DanceService.super.findById(id);
     }
 }
