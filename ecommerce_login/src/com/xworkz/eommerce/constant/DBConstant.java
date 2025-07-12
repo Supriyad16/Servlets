@@ -14,6 +14,7 @@ public enum DBConstant {
 
     public String getProp() {
         return prop;
+
     }
 }
 
