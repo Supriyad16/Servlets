@@ -32,8 +32,6 @@ public class EcommerceRepositoryImp implements EcommerceRepository {
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-
         return "false";
     }
 
@@ -43,7 +41,7 @@ public class EcommerceRepositoryImp implements EcommerceRepository {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-//resource class --> system out side JVM : Connection : resource, costly-memory use
+            //resource class --> system out side JVM : Connection : resource, costly-memory use
             Connection connection = DriverManager.getConnection(DBConstant.URL.getProp(), DBConstant.USERNAME.getProp(), DBConstant.SECRET.getProp());
 
 
