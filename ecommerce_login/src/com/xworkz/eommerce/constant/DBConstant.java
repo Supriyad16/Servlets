@@ -5,7 +5,8 @@ public enum DBConstant {
     USERNAME("root"),
     SECRET("Xworkzodc@123");
 
-    DBConstant(String prop) {
+    DBConstant(String prop)
+    {
         this.prop = prop;
     }
 

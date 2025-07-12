@@ -7,7 +7,7 @@ public interface EcommerceService {
     String validate(EcommerceDTO ecommerceDTO);
 
     default EcommerceDTO findById(int id) {
-
         return null;
+
     }
 }

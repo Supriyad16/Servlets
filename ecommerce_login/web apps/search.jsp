@@ -52,13 +52,10 @@
                 <input type="password" class="form-control" id="password" name="password" value="${dto.password}">
             </div>
 
-
             <button type="submit" class="btn btn-primary">Search </button>
 
         </form>
     </div>
 </div>
-
-
 </body>
 </html>

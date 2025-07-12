@@ -7,4 +7,5 @@ public interface EcommerceRepository {
     String save (EcommerceDTO ecommerceDTO);
 
     EcommerceDTO findById(int id);
+
 }

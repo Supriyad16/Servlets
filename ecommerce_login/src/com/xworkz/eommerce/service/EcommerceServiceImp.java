@@ -26,6 +26,7 @@ public class EcommerceServiceImp implements EcommerceService{
             if(userid!=null && userid.length()>3 && userid.matches(".*[0-9].*")){
                 System.out.println("User Id is valid");
             }
+
             else{
                 System.out.println("User Id is invalid");
                 return "Please enter valid User Id";
@@ -59,7 +60,6 @@ public class EcommerceServiceImp implements EcommerceService{
     public EcommerceDTO findById(int id) {
         if(id<0){
             System.out.println("Id is invalid");
-
             return null;
         }
         else{

@@ -43,7 +43,7 @@ public class EcommerceRepositoryImp implements EcommerceRepository {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-
+//resource class --> system out side JVM : Connection : resource, costly-memory use
             Connection connection = DriverManager.getConnection(DBConstant.URL.getProp(), DBConstant.USERNAME.getProp(), DBConstant.SECRET.getProp());
 
 
@@ -72,11 +72,17 @@ public class EcommerceRepositoryImp implements EcommerceRepository {
 
                 System.out.println("Email:"+email+" User Id:"+userid+" Password:"+password+" Created At: "+createdat);
 
+
                 return  ecommerceDTO;
             }
 
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
+        }
+        finally{
+            //
+            //guranteed
+            //resource close
         }
 
         return null;

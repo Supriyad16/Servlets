@@ -10,6 +10,7 @@ public class EcommerceDTO implements Serializable {
     private String cpassword;
 
     public EcommerceDTO(String email, String userid, String password) {
+
         System.out.println("No-arg constructor of EcommerceDTO");
     }
 

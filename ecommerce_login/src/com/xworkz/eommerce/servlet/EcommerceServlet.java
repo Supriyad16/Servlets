@@ -33,7 +33,6 @@ public class EcommerceServlet extends HttpServlet {
         String result = ecommerceService.validate(ecommerceDTO);
 
 
-
         if (!result.equals("Sign-Up Successfully")) {
             req.setAttribute("dto", ecommerceDTO);
             req.setAttribute("errorMessage", result);
@@ -79,9 +78,6 @@ public class EcommerceServlet extends HttpServlet {
             requestDispatcher.forward(req,resp);
 
         }
-
-
-
 
     }
 }

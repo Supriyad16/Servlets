@@ -36,8 +36,8 @@
         <div>
 
             <span style="color:Green">${message}</span>
-
             <span style="color:red">${errorMessage}</span>
+
             <form action="login" method="post">
 
     <div class="mb-3">
