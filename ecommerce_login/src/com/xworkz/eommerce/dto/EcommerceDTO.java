@@ -21,8 +21,6 @@ public class EcommerceDTO implements Serializable {
         this.cpassword = cpassword;
     }
 
-
-
     public String getEmail() {
         return email;
     }
