@@ -16,6 +16,7 @@ public class AddressDTO {
     private String city;
     private int pincode;
 
+
    private CityDTO cityDTO;
 
 }
